@@ -9,11 +9,11 @@ Cu.import("resource://gre/modules/Task.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
 // The add-on ID defined in install.rdf.
-const ADDON_ID = "ADDON.NAME@SOMEDOMAIN.ORG";
+const ADDON_ID = "test.image.view.panel@mcomella.me";
 
 // Make these IDs unique, preferably tied to a domain that you own.
-const PANEL_ID = "your.panel@somedomain.org";
-const DATASET_ID = "your.dataset@somedomain.org";
+const PANEL_ID = "test_image_view_panel@mcomella_me";
+const DATASET_ID = "test_image_view_panel_data@mcomella_me";
 
 // This file is just an example of what your XHR endpoint could return.
 const DATA_URL = "chrome://youraddon/content/example-items.json";
@@ -34,7 +34,7 @@ function optionsCallback() {
   return {
     title: Strings.GetStringFromName("title"),
     views: [{
-      type: Home.panels.View.LIST,
+      type: Home.panels.View.IMAGE,
       dataset: DATASET_ID
     }],
     onuninstall: function() {
@@ -115,7 +115,7 @@ function startup(data, reason) {
 
   // Open the panel when the add-on is first installed.
   if (reason == ADDON_INSTALL) {
-    openPanel();    
+    openPanel();
   }
 
   // Update data once every hour.
