@@ -73,6 +73,11 @@ function refreshDataset() {
   fetchData(DATA_URL, function(response) {
     Task.spawn(function() {
       let items = JSON.parse(response);
+      let items = [{
+        title: 'IU',
+        url: 'http://wikipedia.org', // TODO: Because we have to.
+        image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/IU_on_October_16%2C_2013_%282%29.jpg',
+      }];
       let storage = HomeProvider.getStorage(DATASET_ID);
       yield storage.deleteAll();
       yield storage.save(items);
