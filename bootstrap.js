@@ -34,7 +34,7 @@ function optionsCallback() {
   return {
     title: Strings.GetStringFromName("title"),
     views: [{
-      type: Home.panels.View.IMAGE,
+      type: Home.panels.View.FULLSCREEN_IMAGE,
       dataset: DATASET_ID
     }],
     onuninstall: function() {
