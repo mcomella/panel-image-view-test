@@ -77,6 +77,21 @@ function refreshDataset() {
         title: 'IU',
         url: 'http://wikipedia.org', // TODO: Because we have to.
         image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/IU_on_October_16%2C_2013_%282%29.jpg',
+      },
+      {
+        title: 'IU2',
+        url: 'https://en.wikipedia.org/wiki/IU_%28singer%29',
+        image_url: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/IU_on_October_16%2C_2013_%285%29.jpg'
+      },
+      {
+        title: 'IU3',
+        url: 'https://en.wikipedia.org/wiki/Duck',
+        image_url: 'http://www.kimballstock.com/pix/CAT/08/CAT-08-KH0008-01P.JPG'
+      },
+      {
+        title: 'Mozilla',
+        url: 'https://mozilla.org',
+        image_url: 'https://assets.mozilla.org/Brands-Logos/Firefox/logo-only/firefox_logo-only_RGB.png'
       }];
       let storage = HomeProvider.getStorage(DATASET_ID);
       yield storage.deleteAll();
